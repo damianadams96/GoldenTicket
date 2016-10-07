@@ -151,7 +151,38 @@ namespace GoldenTicket.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+        FirstName = model.FirstName,
+
+        MdlInit = model.MdlInit,
+
+        LastName = model.LastName,
+
+        StreetAddress = model.StreetAddress,
+
+        City = model.City,
+
+        State = model.State,
+
+        Zip = model.Zip,
+
+        phone = model.phone,
+
+        BDay = model.BDay,
+
+        securityQ1 = model.securityQ1, // Security questions for forgotten password recovery
+
+        SecirutyA1 = model.SecirutyA1, // answer to security question
+
+        securityQ2 = model.securityQ2, // Security questions for forgotten password recovery
+
+        SecirutyA2 = model.SecirutyA2, // answer to security question
+
+        securityQ3 = model.securityQ3, // Security questions for forgotten password recovery
+
+        SecirutyA3 = model.SecirutyA3 // answer to security question
+    };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
