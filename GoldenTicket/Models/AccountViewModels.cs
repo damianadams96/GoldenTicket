@@ -79,6 +79,64 @@ namespace GoldenTicket.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(50, ErrorMessage = "First Name can not be more than 50 Characters long")]
+        [Display(Name ="First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Middle Initial")]
+        public char MdlInit { get; set; }
+
+        [Required]
+        [StringLength(25, ErrorMessage = "Last Name can not be more than 25 Characters long")]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required]
+        [Display(Name = "Street Address")]
+        public string StreetAddress { get; set; }
+
+        [Display(Name = "City")]
+        public string City { get; set; }
+
+        [Display(Name = "State")]
+        public string State { get; set; }
+
+        [Required]
+        [Display(Name = "Zip")]
+        public int Zip { get; set; }
+
+
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone Number")]
+        public int phone { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Birth Date")]
+        public string BDay { get; set; }
+
+        [Required]
+        public string securityQ1 { get; set; } // Security questions for forgotten password recovery
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string SecirutyA1 { get; set; } // answer to security question
+
+        [Required]
+        public string securityQ2 { get; set; } // Security questions for forgotten password recovery
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string SecirutyA2 { get; set; } // answer to security question
+
+        [Required]
+        public string securityQ3 { get; set; } // Security questions for forgotten password recovery
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string SecirutyA3 { get; set; } // answer to security question
     }
 
     public class ResetPasswordViewModel
