@@ -153,6 +153,10 @@ namespace GoldenTicket.Controllers
             {
                 var user = new ApplicationUser
                 {
+        Email = model.Email, 
+
+        UserName = model.Email,
+
         FirstName = model.FirstName,
 
         MdlInit = model.MdlInit,

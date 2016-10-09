@@ -1,0 +1,66 @@
+﻿@model GoldenTicket.Models.Ticket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ticket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cutomerNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cutomerNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataResponded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataResponded)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ticketID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
