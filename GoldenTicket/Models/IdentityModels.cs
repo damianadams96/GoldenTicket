@@ -27,6 +27,7 @@ namespace GoldenTicket.Models
 
         public string BDay { get; set; }
 
+
         public string securityQ1 { get; set; } // Security questions for forgotten password recovery
 
         public string SecirutyA1 { get; set; } // answer to security question
@@ -61,5 +62,7 @@ namespace GoldenTicket.Models
         }
 
         public System.Data.Entity.DbSet<GoldenTicket.Models.Ticket> Tickets { get; set; }
+
+        public System.Data.Entity.DbSet<GoldenTicket.Models.Appointment> Appointments { get; set; }
     }
 }

@@ -116,6 +116,7 @@ namespace GoldenTicket.Models
         [Display(Name = "Birth Date")]
         public string BDay { get; set; }
 
+
         [Required]
         public string securityQ1 { get; set; } // Security questions for forgotten password recovery
 
