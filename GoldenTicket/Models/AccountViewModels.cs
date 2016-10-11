@@ -117,6 +117,9 @@ namespace GoldenTicket.Models
         public string BDay { get; set; }
 
 
+        public bool isEmployee { get; set; }
+
+
         [Required]
         public string securityQ1 { get; set; } // Security questions for forgotten password recovery
 
