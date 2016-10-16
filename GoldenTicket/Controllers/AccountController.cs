@@ -170,8 +170,7 @@ namespace GoldenTicket.Controllers
         State = model.State,
 
         Zip = model.Zip,
-
-        Code = model.Code, 
+ 
 
         PhoneNumber = model.PhoneNumber,
 
