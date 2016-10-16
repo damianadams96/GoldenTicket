@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GoldenTicket.Models;
+using Microsoft.AspNet.Identity;
+using System.Web.Routing;
 
 namespace GoldenTicket.Controllers
 {
@@ -17,7 +19,14 @@ namespace GoldenTicket.Controllers
         // GET: Appointments
         public ActionResult Index()
         {
-            return View(db.Appointments.ToList());
+            var user = User.Identity.GetUserName();
+
+            if (user.Equals(""))
+            {
+                return RedirectToAction("Index", new RouteValueDictionary(new { controller = "Account/Login", action = "Home" }));
+            }
+
+            return View(db.Tickets.ToList());
         }
 
         // GET: Appointments/Details/5

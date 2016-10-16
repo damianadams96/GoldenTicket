@@ -60,10 +60,24 @@
 
     </dl>
 </div>
+@{
 
-if()
+   @* var tickets = from m in _dbContext.Ticket
+                  select m; *@
 
+    if (Model.closed == true)
+    {
+    <p>
+   @* @Html.ActionLink("Edit", "Edit", new { id = Model.ticketID }) |*@
+    @Html.ActionLink("Back to List", "Index")
+   </p>
+    }
+
+    else
+    {
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ticketID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+        }
+    }
