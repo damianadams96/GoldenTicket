@@ -15,11 +15,18 @@ namespace GoldenTicket.Models
         public string customerID { get; set; }
 
         public string subject { get; set; }
+
+        [DataType (DataType.MultilineText)]
         public string cutomerNotes { get; set; }
+
+        [DataType (DataType.MultilineText)]
         public string empNotes { get; set; }
+
         public string date { get; set;}
+
         public string dataResponded { get; set; }
-        public Boolean open { get; set; }
+
+        public Boolean closed { get; set; }
 
     }
 }

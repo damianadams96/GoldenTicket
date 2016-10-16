@@ -4,6 +4,7 @@
     ViewBag.Title = "Create";
 }
 
+
 <h2>Create</h2>
 
 
@@ -34,8 +35,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.cutomerNotes, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.cutomerNotes, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.cutomerNotes, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.cutomerNotes, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.cutomerNotes, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -60,6 +61,13 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.dataResponded, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.dataResponded, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.closed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(model => model.closed, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.closed, "", new { @class = "text-danger" })
             </div>
         </div>
 

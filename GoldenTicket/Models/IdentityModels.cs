@@ -23,7 +23,10 @@ namespace GoldenTicket.Models
 
         public int Zip { get; set; }
 
-        public int phone { get; set; }
+
+        public string Code { get; set; } // phone area code
+
+        public string PhoneNumber { get; set; }
 
         public string BDay { get; set; }
 
